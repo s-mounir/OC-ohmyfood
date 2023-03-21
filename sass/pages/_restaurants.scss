@@ -74,6 +74,9 @@
     &__byline{
         grid-column: 1/5;
         margin: 5px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
     &__price{
         margin: 5px;

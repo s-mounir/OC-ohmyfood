@@ -93,8 +93,8 @@ body{
         }
         &__new{
             border:0;
-            background-color: $colour-tertiary-dark;
-            color: $colour-tertiary;
+            background-color: $colour-tertiary;
+            color: $colour-tertiary-dark;
             border-radius: 3px;
             position: absolute;
             z-index: 1;
@@ -110,8 +110,27 @@ body{
             font-size: 25px;
             grid-column: 4 / 5;
             grid-row: 2/4;
-            &:hover{
+            position: relative;
+            transition: transform 330ms ease-in-out;
+            &:hover .rest-prev__heart-full{
+                height: 30px;
                 color: $colour-primary;
+                transition: all 500ms;
+            }
+            &-full{
+                position: absolute;
+                z-index: 3;
+                top: calc(50% - 15px);
+                left: calc(50% - 15px);
+                height: 0px;
+                overflow:hidden;
+                transition: height 500ms, color 1s;
+            }
+            &-empty{
+                position: absolute;
+                z-index: 2;
+                top: calc(50% - 15px);
+                left: calc(50% - 15px);
             }
         }
         &__heading{
