@@ -108,7 +108,6 @@ body {
   display: grid;
 }
 .steps__link {
-  width: 90%;
   background-color: #F5F5F5;
   border: 0;
   padding: 30px;
@@ -129,8 +128,8 @@ body {
   left: -10px;
 }
 .steps__link-number p {
-  margin: 0;
-  margin-top: 3px;
+  margin: 2px 5px 5px 6px;
+  font-size: 14px;
 }
 .steps__link-icone {
   margin-right: 20px;

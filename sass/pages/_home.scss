@@ -33,7 +33,6 @@ body{
     padding: 20px;
     display: grid;
     &__link{
-        width: 90%;
         background-color: $colour-background;
         border: 0;
         padding: 30px;
@@ -52,8 +51,8 @@ body{
             top: calc(50% - 10px);
             left:-10px;
             & p{
-                margin:0;
-                margin-top: 3px;
+                margin: 2px 5px 5px 6px;
+                font-size: 14px;
             }
         }
         &-icone{
