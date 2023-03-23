@@ -261,6 +261,7 @@ body {
   -ms-grid-row-span: 2;
   grid-row: 2/4;
   position: relative;
+  border-bottom-right-radius: 20px;
   -webkit-transition: -webkit-transform 330ms ease-in-out;
   transition: -webkit-transform 330ms ease-in-out;
   transition: transform 330ms ease-in-out;
@@ -391,6 +392,34 @@ body {
   }
 }
 
+@-webkit-keyframes menu-section {
+  0% {
+    -webkit-transform: translateX(-110%);
+            transform: translateX(-110%);
+  }
+}
+
+@keyframes menu-section {
+  0% {
+    -webkit-transform: translateX(-110%);
+            transform: translateX(-110%);
+  }
+}
+
+@-webkit-keyframes menu-section_desktop {
+  0% {
+    -webkit-transform: translateY(110%);
+            transform: translateY(110%);
+  }
+}
+
+@keyframes menu-section_desktop {
+  0% {
+    -webkit-transform: translateY(110%);
+            transform: translateY(110%);
+  }
+}
+
 .header {
   width: 100%;
   padding: 20px 0 10px 0;
@@ -425,6 +454,7 @@ body {
   display: grid;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
+  overflow: hidden;
 }
 
 .menu__heading {
@@ -443,6 +473,23 @@ body {
   -ms-grid-column-span: 3;
   grid-column: 1/4;
   margin-bottom: 20px;
+  -webkit-animation: menu-section 500ms both;
+          animation: menu-section 500ms both;
+}
+
+.menu-section--1 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.menu-section--2 {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.menu-section--3 {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
 }
 
 .menu-section__heading {
@@ -507,6 +554,20 @@ body {
   .menu-section {
     grid-column: auto;
     padding: 20px;
+    -webkit-animation: menu-section_desktop 500ms both;
+            animation: menu-section_desktop 500ms both;
+  }
+  .menu-section--1 {
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s;
+  }
+  .menu-section--2 {
+    -webkit-animation-delay: 0.4s;
+            animation-delay: 0.4s;
+  }
+  .menu-section--3 {
+    -webkit-animation-delay: 0.6s;
+            animation-delay: 0.6s;
   }
 }
 /*# sourceMappingURL=main.css.map */

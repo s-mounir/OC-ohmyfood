@@ -1,3 +1,15 @@
+@keyframes menu-section {
+    0% {
+        transform: translateX(-110%);
+    }
+}
+
+@keyframes menu-section_desktop {
+    0% {
+        transform: translateY(110%);
+    }
+}
+
 .header{
     width: 100%;
     padding: 20px 0 10px 0;
@@ -29,6 +41,7 @@
     border-radius: 50px 50px 0 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    overflow:hidden;
     &__heading{
         grid-column: 1/4;
         font-family: 'Shrikhand', cursive;
@@ -39,6 +52,12 @@
     &-section{
         grid-column: 1/4;
         margin-bottom: 20px;
+        animation: menu-section 500ms both;
+        @for $i from 1 through 3 {
+            &--#{$i} {
+                animation-delay: .2s * $i;
+            }
+        }
         &__heading{
             text-transform: uppercase;
             font-weight: 100;
@@ -85,15 +104,17 @@
     }
 }
 
-@media all and (min-width: 768px) {
-
-}
-
 @media all and (min-width: 992px) {
     .menu{
         &-section{
             grid-column: auto;
             padding: 20px;
+            animation: menu-section_desktop 500ms both;
+            @for $i from 1 through 3 {
+                &--#{$i} {
+                    animation-delay: .2s * $i;
+                }
+            }
         }
     }
 }
