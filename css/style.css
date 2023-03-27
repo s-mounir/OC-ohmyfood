@@ -179,7 +179,7 @@ body {
 .restaurants .rest-prev__new p {
   margin: 5px 20px 5px 20px;
 }
-.restaurants .rest-prev__heart {
+.restaurants .rest-prev .heart {
   border: 0;
   background-color: #fff;
   font-size: 25px;
@@ -189,21 +189,27 @@ body {
   border-bottom-right-radius: 20px;
   transition: transform 330ms ease-in-out;
 }
-.restaurants .rest-prev__heart:hover .rest-prev__heart-full {
+.restaurants .rest-prev .heart:hover .heart-full {
   height: 30px;
-  color: #9356DC;
   transition: all 500ms;
 }
-.restaurants .rest-prev__heart-full {
+.restaurants .rest-prev .heart-full {
   position: absolute;
   z-index: 3;
   top: calc(50% - 15px);
   left: calc(50% - 15px);
   height: 0px;
   overflow: hidden;
-  transition: height 500ms, color 1s;
+  transition: height 500ms;
 }
-.restaurants .rest-prev__heart-empty {
+.restaurants .rest-prev .heart-full .fa-solid::before {
+  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+.restaurants .rest-prev .heart-empty {
   position: absolute;
   z-index: 2;
   top: calc(50% - 15px);
@@ -350,9 +356,43 @@ body {
 .menu__heading {
   grid-column: 1/4;
   font-family: "Shrikhand", cursive;
+  display: flex;
 }
-.menu__heart {
-  margin-left: 30px;
+.menu__heading .heart {
+  border: 0;
+  background-color: #fff;
+  font-size: 25px;
+  grid-column: 4/5;
+  grid-row: 2/4;
+  position: relative;
+  border-bottom-right-radius: 20px;
+  transition: transform 330ms ease-in-out;
+}
+.menu__heading .heart:hover .heart-full {
+  height: 30px;
+  transition: all 500ms;
+}
+.menu__heading .heart-full {
+  position: absolute;
+  z-index: 3;
+  top: calc(50% - 15px);
+  left: 50px;
+  height: 0px;
+  overflow: hidden;
+  transition: height 500ms;
+}
+.menu__heading .heart-full .fa-solid::before {
+  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+.menu__heading .heart-empty {
+  position: absolute;
+  z-index: 2;
+  top: calc(50% - 15px);
+  left: 50px;
 }
 .menu-section {
   grid-column: 1/4;
