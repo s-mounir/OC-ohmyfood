@@ -114,7 +114,7 @@ body{
             transition: transform 330ms ease-in-out;
             &:hover .heart-full{
                 height: 30px;
-                transition: all 500ms;
+                transition: height 500ms;
             }
             &-full{
                 position: absolute;
