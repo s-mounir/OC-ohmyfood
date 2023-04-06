@@ -300,30 +300,12 @@ body {
     opacity: 0;
   }
 }
-@keyframes dish__reducing-detail {
-  0% {
-    width: 100%;
-  }
-  100% {
-    width: 85%;
-  }
-}
-@keyframes adding-dish {
-  0% {
-    width: 0%;
-    opacity: 0;
-  }
-  100% {
-    width: 15%;
-    opacity: 100%;
-  }
-}
 @keyframes rotation {
   from {
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(359deg);
+    transform: rotate(360deg);
   }
 }
 .header {
@@ -446,6 +428,8 @@ body {
 .dish-detail {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+  width: 100%;
+  transition: all 1s;
 }
 .dish-detail__heading {
   grid-column: 1/5;
@@ -475,6 +459,8 @@ body {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   opacity: 0;
+  width: 0%;
+  transition: all 1s;
 }
 .dish__add--circle {
   background-color: #fff;
@@ -491,10 +477,11 @@ body {
   padding: 3px;
 }
 .dish:hover .dish-detail {
-  animation: dish__reducing-detail 1s both;
+  width: 85%;
 }
 .dish:hover .dish__add {
-  animation: adding-dish 1s both;
+  opacity: 1;
+  width: 15%;
 }
 .dish:hover .dish__add--circle {
   animation: rotation 1s both;
