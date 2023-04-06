@@ -147,6 +147,9 @@
         &__heading{
             grid-column: 1/5;
             margin: 5px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         &__byline{
             grid-column: 1/5;
@@ -164,7 +167,6 @@
     &__add{
         position: absolute;
         height:100%;
-        width:15%;
         top:0;
         right:0;
         background-color: $colour-tertiary;
